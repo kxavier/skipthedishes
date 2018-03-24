@@ -22,7 +22,6 @@ public class CustomerDAO {
         query.setParameter("password",password);
         try {
             Customer c = (Customer) query.getSingleResult();
-            System.out.println(c);
         } catch(NoResultException ex) {
             return false;
         }
