@@ -1,0 +1,24 @@
+version: "3"
+services:
+    skip-mysql:
+        image: mysql:5.5
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: skip
+            MYSQL_PASSWORD: skip
+            MYSQL_DATABASE: skip
+        networks:
+            - skipnet
+  
+    skip-api: 
+        image: kxavier/skip-api
+        ports: 
+            - 8080:8080
+        networks:
+            - skipnet
+networks:
+    skipnet:
+    
+    
+
+ 
